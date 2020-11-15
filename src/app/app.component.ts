@@ -7,6 +7,7 @@ import {FormControl} from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
+  firstname = new FormControl('');
+
+
 }

@@ -1,10 +1,9 @@
-<div class="custom-wrapper-example" matAutocompleteOrigin #origin="matAutocompleteOrigin">
-  <input #trigger="matAutocompleteTrigger" matInput [matAutocomplete]="auto" [matAutocompleteConnectedTo]="origin"
-    class="custom-input">
-  <mat-icon (click)="$event.stopPropagation(); trigger.panelOpen ? trigger.closePanel() : trigger.openPanel()" class="custom-icon">
-    arrow_drop_down
-  </mat-icon>
-</div>
-<mat-autocomplete #auto="matAutocomplete">
-  <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option>
-</mat-autocomplete>
+<h2>Form control:</h2>
+
+<label>
+	  First Name:
+		<input type="text" [formControl]="firstname">
+</label>
+  <p>
+	  Value: {{ firstname.value }}
+	</p>
