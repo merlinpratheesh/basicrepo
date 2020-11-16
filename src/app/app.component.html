@@ -12,5 +12,19 @@
     </label>
     <p>
 		<button type="submit" [disabled]="!groupedform.valid" (click)="updateName()">Update Name</button>
-	</p>
+    </p>
+    
+    <h2>Form Array:</h2>
+
+<div formArrayName="knownlanguages">
+  <h3>Languages Known:</h3> <button (click)="setlangfun()">Add Languages</button>
+  <br/>
+  <div *ngFor="let address of knownlanguagesfun.controls ; let i=index">
+    <br/>
+    <label>
+        Languages:
+    <input type="text" [formControlName]="i"/>
+    </label>
+  </div>
+</div>
 </form>
