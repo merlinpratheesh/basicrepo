@@ -11,3 +11,11 @@
     border: none;
     margin-top: 0;
   }
+  .custom-icon {
+    cursor: pointer;
+  }
+  .custom-form-field-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
