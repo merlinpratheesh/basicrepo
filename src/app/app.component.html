@@ -1,10 +1,16 @@
-<div class="custom-wrapper-example" matAutocompleteOrigin #origin="matAutocompleteOrigin">
-  <input #trigger="matAutocompleteTrigger" matInput [matAutocomplete]="auto" [matAutocompleteConnectedTo]="origin"
-    class="custom-input">
-  <mat-icon (click)="$event.stopPropagation(); trigger.panelOpen ? trigger.closePanel() : trigger.openPanel()" class="custom-icon">
-    arrow_drop_down
-  </mat-icon>
-</div>
-<mat-autocomplete #auto="matAutocomplete">
-  <mat-option *ngFor="let option of options" [value]="option">{{option}}</mat-option>
-</mat-autocomplete>
+
+<h2>Form Group:</h2>
+
+<form [formGroup] = 'groupedform' >
+    <label>Name:  <br>
+        <input type="text" formControlName='Name' required/>
+    </label>
+    <br>
+    <br>
+    <label>Email:  <br>
+        <input type="email" formControlName='Email' required/>
+    </label>
+    <p>
+		<button type="submit" [disabled]="!groupedform.valid" (click)="updateName()">Update Name</button>
+	</p>
+</form>
