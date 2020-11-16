@@ -1,9 +1,9 @@
 .example-form {
     min-width: 150px;
     max-width: 500px;
-    width: 100%;
-    border: 1px solid #ccc;
-    background-color: #fff;
+    width: 200px;
+    border: 1px solid rgb(52, 190, 17);
+    background-color: rgb(235, 241, 247);
   }
   
   .example-full-width {
