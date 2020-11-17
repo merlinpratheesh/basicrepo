@@ -1,19 +1,13 @@
-<form class="example-form">
-  <mat-form-field class="example-full-width">
-<!-- #docregion input -->
-    <input type="text"
-           placeholder="Pick one"
-           aria-label="Number"
-           matInput
-           [formControl]="myControl"
-           [matAutocomplete]="auto">
-<!-- #enddocregion input -->
-<!-- #docregion mat-autocomplete -->
-    <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let option of options" [value]="option">
-        {{option}}
-      </mat-option>
-    </mat-autocomplete>
-<!-- #enddocregion mat-autocomplete -->
-  </mat-form-field>
+<form [formGroup]="reactiveForm" class="row ">
+	<div class="col-md-12 text-right">
+		<div class="form-group">
+			<div class="mr-0 pretty p-svg p-curve">
+				<input type="checkbox" id="lock-vendor-booth"
+                     formControlName="formctrl"/>
+				<div class="state p-danger">
+					<label>Lock </label>
+				</div>
+			</div>
+		</div>
+	</div>
 </form>
