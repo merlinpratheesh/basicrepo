@@ -9,4 +9,6 @@ import {FormControl} from '@angular/forms';
 export class AppComponent {
   myControl = new FormControl();
   options: string[] = ['One', 'Two', 'Three'];
+  panelOpenState = false;
+
 }
