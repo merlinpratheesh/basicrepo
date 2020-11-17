@@ -17,3 +17,8 @@
 <!-- #enddocregion mat-autocomplete -->
   </mat-form-field>
 </form>
+<mat-checkbox (change)='onChange($event)' color='primary' [(ngModel)]='isChecked' > Check me!</mat-checkbox>
+
+<button style='right:-20%' mat-raised-button color='primary' (click)='isChecked=!isChecked;onChange($event)'>click </button>
+<br><br>
+checkbox is {{isChecked}}
