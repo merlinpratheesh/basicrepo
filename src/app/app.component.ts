@@ -7,9 +7,6 @@ import { FormBuilder, FormGroup, Validators,FormArray, FormControl } from '@angu
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  myControl = new FormControl();
-  options: string[] = ['One', 'Two', 'Three'];
-
   profileForm = this.fb.group({
     firstName: ['', Validators.required],
     lastName: [''],
@@ -31,14 +28,6 @@ export class AppComponent {
   constructor(private fb: FormBuilder) { }
 
 
-  updateProfile() {
-    this.profileForm.patchValue({
-      firstName: 'Nancy',
-      address: {
-        street: '123 Drew Street'
-      }
-    });
-  }
 
   addAlias() {
     this.aliases.push(this.fb.control(''));
