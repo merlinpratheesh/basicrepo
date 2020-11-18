@@ -3,12 +3,13 @@
 <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
   <label>
     First Name:
-    <input type="text" formControlName="firstName" required>
+    <input type="text" formControlName="firstName" required>  
   </label>
 
   <label>
     Last Name:
-    <input type="text" formControlName="lastName">
+    <input type="text"  placeholder="name@example.com" formControlName="lastName" required>
+    <div class="invalid-feedback" *ngIf="profileForm.controls['myInput'].errors && profileForm.controls['myInput'].errors.required">Minimun 4 Characters required</div>
   </label>
 
   <div formGroupName="address">
@@ -62,6 +63,4 @@
   Form Status: {{ profileForm.status }}
 </p>
 
-<p>
-  <button (click)="updateProfile()">Update Profile</button>
-</p>
+

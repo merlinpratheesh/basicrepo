@@ -10,6 +10,7 @@ export class AppComponent {
   profileForm = this.fb.group({
     firstName: ['', Validators.required],
     lastName: [''],
+    myInput: new FormControl('', [Validators.required, Validators.minLength(4)]),
     address: this.fb.group({
       street: [''],
       city: [''],
